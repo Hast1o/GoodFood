@@ -3,11 +3,12 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  base: '/GoodFood/', 
+  
   plugins: [
     react(),
     tailwindcss(),
   ],
-  // Agregamos esto para obligar a Vite a leer la librería cruda
   optimizeDeps: {
     exclude: ['lucide-react'],
   },

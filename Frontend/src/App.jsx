@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Inicio from './pages/Inicio';
 import Informacion from './pages/Informacion';
@@ -8,7 +8,7 @@ import Contacto from './pages/Contacto';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen flex flex-col bg-gray-50 font-sans text-gray-800">
         
         {/* NAVBAR PRINCIPAL */}
@@ -69,7 +69,7 @@ function App() {
         </footer>
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
