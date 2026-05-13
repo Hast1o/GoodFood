@@ -25,27 +25,27 @@ function Header() {
 
   const navLinks = [
     { name: 'Inicio', path: '/' },
-    { name: 'Servicios', path: '/servicios' },
     { name: 'Información', path: '/informacion' },
+    { name: 'Servicios', path: '/servicios' },
     { name: 'Contacto', path: '/contacto' }
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-2 border-purple-100 shadow-md transition-all duration-300 w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 h-28 md:h-36 flex w-full items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 border-t-[6px] border-t-[#5A189A] shadow-sm transition-all duration-300 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 md:py-4 flex w-full items-center justify-between">
         
-        {/* Logo - Tamaño maximizado */}
-        <Link to="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+        {/* ENLACE DEL LOGO: Se le da un poco de margen izquierdo para compensar el escalado visual */}
+        <Link to="/" className="flex items-center ml-4 md:ml-8 hover:opacity-90 transition-opacity" onClick={() => setIsMenuOpen(false)}>
+          {/* LOGO: Configuración exacta con el scale-[2.2] que indicaste */}
           <img 
             src={logo} 
-            alt="Good Food Logo" 
-            className="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain transition-all duration-300 transform hover:scale-105" 
+            alt="Goodfood Logo" 
+            className="h-16 md:h-20 w-auto object-contain scale-[2.2]" 
           />
         </Link>
 
-        {/* Navegación Escritorio */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
@@ -53,10 +53,10 @@ function Header() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-black text-xs xl:text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:text-[#5A189A] ${
+                className={`font-semibold text-[15px] transition-all duration-300 hover:text-[#5A189A] ${
                   isActive 
-                    ? 'text-[#5A189A] border-b-4 border-[#5A189A] pb-2' 
-                    : 'text-gray-500'
+                    ? 'text-[#5A189A]' 
+                    : 'text-gray-600'
                 }`}
               >
                 {link.name}
@@ -68,37 +68,35 @@ function Header() {
             href="https://wa.me/56977976539"
             target="_blank"
             rel="noreferrer"
-            className="ml-4 bg-[#5A189A] text-white px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-[#48127a] hover:scale-110 hover:shadow-[0_15px_30px_rgba(90,24,154,0.4)] transition-all flex items-center gap-3"
+            className="ml-4 bg-[#5A189A] text-white px-6 py-2.5 rounded-full font-semibold text-[15px] hover:bg-[#48127a] hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2"
           >
-            <IconoWhatsApp className="w-6 h-6" />
+            <IconoWhatsApp className="w-5 h-5" />
             Contactar
           </a>
         </nav>
 
-        {/* Botón Menú Móvil */}
         <button
-          className="lg:hidden p-3 text-[#5A189A] border-2 border-purple-100 rounded-2xl transition-colors flex items-center justify-center shadow-sm"
+          className="lg:hidden p-2 text-[#5A189A] border border-purple-100 rounded-xl transition-colors flex items-center justify-center shadow-sm"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <X size={36} /> : <Menu size={36} />}
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Menú Desplegable Móvil */}
       <div 
-        className={`lg:hidden absolute top-full left-0 w-full bg-white border-b-4 border-purple-600 shadow-2xl transition-all duration-500 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-[700px] opacity-100 py-10 px-8' : 'max-h-0 opacity-0'
+        className={`lg:hidden absolute top-full left-0 w-full bg-white border-b border-purple-100 shadow-xl transition-all duration-300 ease-in-out overflow-hidden ${
+          isMenuOpen ? 'max-h-[600px] opacity-100 py-6 px-8' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
             return (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-black uppercase tracking-widest text-2xl py-5 border-b-2 border-gray-50 transition-colors ${
-                  isActive ? 'text-[#5A189A]' : 'text-gray-800 hover:text-[#5A189A]'
+                className={`font-semibold text-lg py-4 border-b border-gray-50 transition-colors ${
+                  isActive ? 'text-[#5A189A]' : 'text-gray-700 hover:text-[#5A189A]'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -110,11 +108,11 @@ function Header() {
             href="https://wa.me/56977976539"
             target="_blank"
             rel="noreferrer"
-            className="bg-[#5A189A] text-white text-center px-8 py-6 mt-10 rounded-[2rem] font-black uppercase tracking-widest text-xl hover:bg-[#48127a] transition-all shadow-2xl flex items-center justify-center gap-4 active:scale-95"
+            className="bg-[#5A189A] text-white text-center px-6 py-4 mt-6 rounded-full font-bold text-lg hover:bg-[#48127a] transition-all shadow-md flex items-center justify-center gap-3 active:scale-95"
             onClick={() => setIsMenuOpen(false)}
           >
-            <IconoWhatsApp size={28} />
-            Contactar ahora
+            <IconoWhatsApp size={24} />
+            Contactar
           </a>
         </div>
       </div>

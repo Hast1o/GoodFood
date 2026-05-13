@@ -39,6 +39,7 @@ function Contacto() {
               <input type="hidden" name="_subject" value="¡Nueva consulta desde la página web de Goodfood!" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://hast1o.github.io/GoodFood/#/" />
               
               {/* Fila 1: Nombre y Empresa */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
