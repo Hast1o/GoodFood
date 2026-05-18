@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ShieldCheck, AlertTriangle, CheckCircle2, History, ListChecks, Info } from 'lucide-react';
 
 function Informacion() {
   return (
     <div className="bg-gray-50 min-h-screen py-16 px-6">
       <div className="max-w-5xl mx-auto space-y-16">
-        
+
         {/* ENCABEZADO E INTRODUCCIÓN */}
         <section className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl font-black text-[#5A189A] tracking-tight">
             Buenas Prácticas de Manufactura (BPM)
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            ¿Suenan intimidantes? Pero son más fáciles de lo que parecen. Se trata de un conjunto de reglas y acciones para garantizar que la comida llegue a la mesa preparada bajo estándares de calidad y seguridad alimentaria.
+            Se trata de un conjunto de reglas y acciones para garantizar que la comida llegue a la mesa del consumidor preparada bajo estándares de calidad y seguridad alimentaria.
           </p>
           <p className="text-lg text-gray-600 font-medium">
-            Es el tipo de cosas que hacen que confíes en lo que comes sin pensarlo dos veces...
+            Es el tipo de cosas que hacen que confíes en lo que comes sin pensarlo dos veces.
           </p>
         </section>
 
@@ -30,7 +31,7 @@ function Informacion() {
               Cuando hablamos de Buenas Prácticas de Manufactura o BPM, nos referimos a principios básicos de higiene que se deben seguir para garantizar que cualquier producto cumpla con los requisitos sanitarios para cuidar la salud de los consumidores.
             </p>
             <p>
-              En el sector Horeca y Food Service, son acciones esenciales aplicadas en cada etapa: desde la manipulación y preparación, hasta el envasado, transporte y distribución. 
+              Son acciones esenciales aplicadas en cada etapa del proceso: desde la manipulación y preparación, hasta el envasado, transporte y distribución.
             </p>
             <div className="bg-purple-50 p-6 rounded-xl border border-purple-100 mt-6">
               <p className="font-semibold text-[#5A189A] flex items-start gap-3">
@@ -46,7 +47,7 @@ function Informacion() {
           <div className="bg-white rounded-3xl shadow-md p-8">
             <h3 className="text-2xl font-bold text-[#5A189A] mb-4">Objetivos Principales</h3>
             <p className="text-gray-700 mb-4">
-              ¿Sabías que <strong>1 de cada 10 personas enferma</strong> por ingerir alimentos contaminados? 
+              ¿Sabías que <strong>1 de cada 10 personas enferma</strong> por ingerir alimentos contaminados?
             </p>
             <p className="text-gray-700">
               Las BPM buscan prevenir la contaminación física, química o biológica. Promueven la confianza del consumidor y aseguran el cumplimiento de las normativas vigentes.
@@ -73,11 +74,11 @@ function Informacion() {
           <h2 className="text-3xl font-bold text-center text-[#5A189A] mb-10">Las 5 Reglas Básicas (Las 5 BPM)</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
-              { title: "Personas", desc: "Altos estándares de higiene personal y operativa." },
+              { title: "Personas", desc: "Altos estándares de higiene personal, manejo de conductas y operativa." },
               { title: "Instalaciones", desc: "Rutina estricta de limpieza y desinfección." },
               { title: "Productos", desc: "Inspección rigurosa de materias primas." },
-              { title: "Procedimientos", desc: "Separación de alimentos crudos y cocidos." },
-              { title: "Procesos", desc: "Asegurar un almacenamiento adecuado." }
+              { title: "Procedimientos", desc: "Prevenir contaminación cruzadas." },
+              { title: "Procesos", desc: "Asegurar un manejo de productos y almacenamiento adecuado." }
             ].map((regla, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl shadow-sm text-center border border-gray-100 hover:border-purple-300 transition-colors">
                 <div className="w-10 h-10 bg-purple-100 text-[#5A189A] font-black rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -96,7 +97,7 @@ function Informacion() {
             <div className="md:w-1/3">
               <h2 className="text-3xl font-bold text-purple-300 mb-4">Ventajas de Implementar BPM</h2>
               <p className="text-gray-400">
-                Además de garantizar la seguridad alimentaria, son el punto de partida para cumplir normas como HACCP e ISO.
+                Además de garantizar la seguridad alimentaria, son el punto de partida para cumplir normas como HACCP, ISO BRC.
               </p>
             </div>
             <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -133,36 +134,27 @@ function Informacion() {
             </div>
             <div>
               <h4 className="text-xl font-bold text-[#5A189A] mb-2">3. Higiene del Personal</h4>
-              <p className="text-gray-700">Certificación médica vigente, higiene personal impecable y capacitación constante en Buenas Prácticas de Higiene.</p>
+              <p className="text-gray-700">Higiene y presentación personal, manejo de conductas y capacitación constante en Buenas Prácticas de Higiene.</p>
             </div>
             <div>
               <h4 className="text-xl font-bold text-[#5A189A] mb-2">4. Control de Materias Primas</h4>
-              <p className="text-gray-700">Trazabilidad eficiente para garantizar que no existan microorganismos ni sustancias tóxicas. Inspección en toda la cadena productiva.</p>
+              <p className="text-gray-700">Trazabilidad eficiente para garantizar que no existan contaminación de tipo física, química ni microbiológica. Inspección en toda la cadena productiva.</p>
             </div>
           </div>
-        </section>
-
-        {/* SECCIÓN: HISTORIA (Acordeón visual o bloque discreto) */}
-        <section className="bg-purple-50 p-8 rounded-2xl text-gray-700">
-          <h3 className="text-xl font-bold text-[#5A189A] mb-4 flex items-center gap-2">
-            <History size={24} /> Un poco de historia
-          </h3>
-          <p className="text-sm leading-relaxed mb-4">
-            La primera aproximación a las BPM ocurrió en EE.UU. en 1906 con la FDA. En 1938 se introdujo el concepto de inocuidad. Posteriormente, la FAO y la OMS desarrollaron el <strong>Codex Alimentarius</strong>, una referencia internacional de prácticas higiénicas que sirve como base para las legislaciones locales de cada nación.
-          </p>
         </section>
 
         {/* SECCIÓN: CIERRE ADAPTADO (Goodfood) */}
         <section className="text-center bg-[#5A189A] text-white rounded-3xl p-10 md:p-16 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-black mb-6">Cómo Goodfood te ayuda a garantizar las BPM</h2>
           <p className="text-lg text-purple-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Las buenas prácticas pueden parecer un conjunto de reglas que complican los procesos, pero son la clave para el éxito. En <strong>Goodfood</strong> nos encargamos de auditar, asesorar y estandarizar tus procesos para que cumplas con la normativa sin dolores de cabeza. 
-            <br/><br/>
-            Implementarlas no es un gasto, es una inversión que asegura la excelencia, la confianza de tus comensales y la reputación de tu negocio.
+            Las buenas prácticas pueden parecer un conjunto de reglas que complican los procesos, pero son la clave para el éxito. En <strong>Goodfood</strong> nos encargamos de auditar, asesorar, capacitar  y estandarizar tus procesos para que cumplas con la normativa sin dolores de cabeza.
+            <br /><br />
+
+            Implementarlas no es un gasto, es una inversión que asegura la excelencia, la confianza de sus y clientes y la reputación de su negocio.  Siempre es más barato  y más eficiente anticipar su negocio   cumpliendo con la normativa  legal vigente solicitada por Seremi de salud.
           </p>
-          <a href="/contacto" className="inline-block bg-white text-[#5A189A] font-bold text-lg py-4 px-10 rounded-full hover:bg-gray-100 transition-transform hover:scale-105 shadow-xl">
+          <Link to="/contacto" className="inline-block bg-white text-[#5A189A] font-bold text-lg py-4 px-10 rounded-full hover:bg-gray-100 transition-transform hover:scale-105 shadow-xl">
             Asesórate con Nosotros
-          </a>
+          </Link>
         </section>
 
       </div>

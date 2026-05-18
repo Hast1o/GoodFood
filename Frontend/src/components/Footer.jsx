@@ -132,9 +132,7 @@ function Footer() {
           <p className="text-sm text-gray-500">
             &copy; {anioActual} Good Food Asesorías. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6 text-sm text-gray-500">
-            <Link to="/privacidad" className="hover:text-purple-400 transition-colors">Políticas de Privacidad</Link>
-          </div>
+          
         </div>
       </div>
     </footer>

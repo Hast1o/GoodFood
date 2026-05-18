@@ -30,6 +30,10 @@ function Header() {
     { name: 'Contacto', path: '/contacto' }
   ];
 
+  const numeroWhatsApp = "56977976539";
+  const mensajeWhatsApp = "Hola Paulina, vengo desde la página web de Goodfood y me gustaría cotizar una asesoría.";
+  const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeWhatsApp)}`;
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -65,7 +69,7 @@ function Header() {
           })}
           
           <a
-            href="https://wa.me/56977976539"
+            href={linkWhatsApp}
             target="_blank"
             rel="noreferrer"
             className="ml-4 bg-[#5A189A] text-white px-6 py-2.5 rounded-full font-semibold text-[15px] hover:bg-[#48127a] hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2"
@@ -105,7 +109,7 @@ function Header() {
             );
           })}
           <a
-            href="https://wa.me/56977976539"
+            href={linkWhatsApp}
             target="_blank"
             rel="noreferrer"
             className="bg-[#5A189A] text-white text-center px-6 py-4 mt-6 rounded-full font-bold text-lg hover:bg-[#48127a] transition-all shadow-md flex items-center justify-center gap-3 active:scale-95"
