@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <BrowserRouter basename="/GoodFood/">
+    <BrowserRouter>
       
       {/* El Header vuelve a estar aquí arriba para mostrarse en todas las páginas */}
       <Header />
