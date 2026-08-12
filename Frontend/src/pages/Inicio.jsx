@@ -11,6 +11,7 @@ import trabajo5 from '../assets/trabajo5.jpg';
 import trabajo6 from '../assets/trabajo6.jpg';
 import trabajo7 from '../assets/trabajo7.jpg';
 import trabajo8 from '../assets/trabajo8.jpg';
+import trabajo9 from '../assets/trabajo9.jpeg';
 import reel1 from '../assets/reels1.mp4';
 import reel2 from '../assets/reels2.mp4';
 import reel3 from '../assets/reels3.mp4';
@@ -125,7 +126,7 @@ function Inicio() {
     return () => { cancelled = true; };
   }, [logos]);
 
-  const galleryImages = [trabajo1, trabajo2, trabajo3, trabajo4, trabajo5, trabajo7, trabajo8];
+  const galleryImages = [trabajo1, trabajo2, trabajo3, trabajo4, trabajo5, trabajo7, trabajo8, trabajo9];
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
